@@ -48,7 +48,7 @@ app.post("/shops", function (req, res) {
         );
         console.log(maxid);
         let newid = maxid + 1;
-        let newshops = { ...body, id: newid };
+        let newshops = { ...body, shopid: newid };
         data2.shops.push(newshops);
         let data1 = JSON.stringify(data2);
         fs.writeFile(fname, data1, function (err) {
